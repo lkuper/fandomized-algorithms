@@ -6,6 +6,7 @@ Ubuntu package python3-bs4 ."""
 import urllib.request
 import time
 import re
+import random
 from bs4 import BeautifulSoup
 
 URLTEMPLATE = "http://archiveofourown.org/works/{0}?view_adult=true"
@@ -27,19 +28,25 @@ def get_number(workid):
 
     html = get_html(workid)
     soup = BeautifulSoup(html)
+    numbers = []
 
     chapters = soup.find(id='chapters')
+    if chapters is None:
+        return None
     text = chapters.get_text()
 
     tokens = text.split()
     for token in tokens:
         match = re.match(NUMBERPAT, token)
         if match:
-            return int(match.group(0))
+            numbers.append(int(match.group(0)))
+    if numbers:
+        return random.choice(numbers)
     return None
 
 def main():
-    workid = 598203
+    seed = int(time.time()) % 100 ## add some entropy to our fentropy
+    workid = 598203 + seed
 
     while True:
         number = get_number(workid)
@@ -48,9 +55,9 @@ def main():
         else:
             print("No numbers in workid", workid)
         workid += 1
-        time.sleep(1)
+        time.sleep(5)
 
-    print(number)
+    print("YOUR FANDOM NUMBER:", number)
     print("from workid", workid, "at", URLTEMPLATE.format(workid))
 
 if __name__ == "__main__": main()
