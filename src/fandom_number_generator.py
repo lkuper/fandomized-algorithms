@@ -46,6 +46,8 @@ def get_number(workid):
 
 def main():
     seed = int(time.time()) % 100 ## add some entropy to our fentropy
+    ## this would be better if we spread out more across AO3.
+    ## how many works are there currently, do you think?
     workid = 598203 + seed
 
     while True:
