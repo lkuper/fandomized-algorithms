@@ -1,4 +1,4 @@
-\documentclass[11pt,twocolumn]{article}
+\documentclass[9pt]{sigplanconf}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
 \usepackage{latexsym}
@@ -8,30 +8,32 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{etoolbox}
 
-\title{fandomized algorithms situation}
+%% Patch the copyright box to make it go away.
+\makeatletter
+\patchcmd{\maketitle}{\@copyrightspace}{}{}{}
+\makeatother
 
-\author{Lindsey Kuper and Alex Rudnick \\
-  School of Transformative Works, Indiana University \\
-  Bloomington, Indiana, USA\\
-  {\tt \{lkuper,alexr\}@cs.indiana.edu} }
-
-\date{}
 
 \begin{document}
+
+\title{Fandom Number Generation}
+
+\authorinfo{Lindsey Kuper \and Alex Rudnick}
+           {School of Transformative Works, Indiana University}
+           {\{lkuper, alexr\}@cs.indiana.edu}
+
 \maketitle
 
 \begin{abstract}
-go!
+We introduce the concept of fandomness and demonstrate how to generate
+fandom numbers.
+
 \end{abstract}
 
-\section{Introduction}
-\cite{DBLP:books/daglib/0067131} or whatever.
-
-\section{Related Work}
-
-
 \section{Future Work}
+
 fentropy
 
 fandom numbers
@@ -76,15 +78,18 @@ Markov Fandom Field;
   a consistent community(XXX: better term)-wide headcannon may not emerge.
 
 \section{A practical fandom number generator}
-We have developed a practical algorithm and implementation for generating
-fandom numbers, a key component for any fandomized algorithm. A naturally
-occurring source of fentropy, Archive of Our Own \footnote{Google for ``archive
-of our own"; do you not know how to do web searches?}, supplies an
-ever-increasing amount of fandomness, certainly more than the current global
-demand for fentropy to power fandomized algorithms. As fandomized algorithms
-become more broadly deployed, further sources of fandomness may be required --
-we may have to mine THE DARK SOCIAL\footnote{THE DARK SOCIAL} -- but we will
-burn that bridge when we get to it.
+We have developed a practical algorithm and implementation for
+generating fandom numbers, a key component for any fandomized
+algorithm. A naturally occurring source of fentropy, Archive of Our
+Own\footnote{Google for ``archive of our own"; do you not know how to
+  do web searches?\footnotemark}
+\footnotetext{Oh, fine.  It's \cite{ao3}.}, supplies an
+ever-increasing amount of fandomness, certainly more than the current
+global demand for fentropy to power fandomized algorithms. As
+fandomized algorithms become more broadly deployed, further sources of
+fandomness may be required -- we may have to mine THE DARK
+SOCIAL\footnote{THE DARK SOCIAL} -- but we will burn that bridge when
+we get to it.
 
 Right. Yes.
 
@@ -106,6 +111,28 @@ grammar? Transformative grammar?
 
 Fandomized algorithms could be used for generating maximum-entropy OTPs.
 
-\bibliographystyle{acm}
-\bibliography{fandomized.bib}{}
+\section{Applications}
+
+\subsection{OTPs}
+
+OTPs are one of the most important applications of fandom numbers.  To
+use an OTP, you put a character together with a character from a
+secret fandom pad that it truly loves and with whom it truly belongs
+(mod 26).  The true love of an OTP has been proven to be impossible to
+break.
+
+\section{Fentropy}
+
+Fentropy is a measure of the fannishness of a fandom variable.
+
+The world's technological capacity to store and communicate fentropic
+information has increased since the advent of the information age,
+especially since Dreamwidth launched.
+
+Unfortunately, if fentropy increases until all fenergy is equally
+distributed, it will eventually cause the heat death of the Jossverse.
+
+\bibliographystyle{abbrvnat}
+\bibliography{fandomized}
+
 \end{document}
