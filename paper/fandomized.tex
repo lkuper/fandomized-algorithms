@@ -11,14 +11,17 @@
 \usepackage{etoolbox}
 
 %% Patch the copyright box to make it go away.
+%% Better: challenge the notion of copyright at all, put something about how
+%% ACH believes that copyright is theft.
+%% An interesting anecdote: the style file that has the ACM copyright notice is
+%% CC-BY.
 \makeatletter
 \patchcmd{\maketitle}{\@copyrightspace}{}{}{}
 \makeatother
 
-
 \begin{document}
 
-\title{Fandom Number Generation}
+\title{Fandomized Algorithms and Fandom Number Generation}
 
 \authorinfo{Lindsey Kuper \and Alex Rudnick}
            {School of Transformative Works, Indiana University}
@@ -27,37 +30,18 @@
 \maketitle
 
 \begin{abstract}
-We introduce the concept of fandomness and demonstrate how to generate
-fandom numbers.
-
+We introduce the concept of \emph{fandomness} and of fandomized algorithms, and
+demonstrate their application in a practical fandom number generator.
 \end{abstract}
 
-\section{Future Work}
-
-fentropy
-
-fandom numbers
-
-markov fandom fields
-optimize with loopy headcannon propagation
-
-generating OTPs on demand using Fandomized Algorithms. (keep it ambiguous what
-we mean by OTP)
-
-\section{Fandom Number Generator}
-Critical in the development of the 
-
-\section{OUT}
-
-\section{alexr writing things}
+\section{Introduction}
 As the dictum about software development goes, ``shipping code wins". We have
-integrated this advice into our headcannon, but we realize that large portions
-(fandoms?) in the computer science community remain blissfully unaware (how do
-you say "doesn't share that headcannon?") ...
+accepted this idea as headcannon, but we realize that large portions
+(fandoms?) in the computer science community remain squicked by it.
+
 As such, we wish to provide a survey of the current work in fandomized
-algorithms and the required formalisms; going forward, it may become clear that
-fandom theory (XXX; something about transformational works) and computer
-science are the OTP.
+algorithms and the associated formalisms; in upcoming seasons, we expect that
+it will be revealed that fandom and computer science are the OTP.
 
 Introduce the notion of \emph{fandomness} ...
 
@@ -66,16 +50,17 @@ these fandom numbers requires a source of \emph{fentropy}. Thankfully there
 exist highly fentropic processes in nature; we can usually sample from them
 over the Internet.
 
-Given a set of fandom variables, we can compute their fentropy as a function of
-... although doing so is MLP-hard.
-
-We may wish to do inference over collections (cliques of fans? is there a good
-term for this? XXX needs work...) of interacting fandom variables using a
-Markov Fandom Field; 
-- exact inference with headcannon propagation may be intractable
+We may also wish to do inference over collections (cliques of fans? is there a
+good term for this? XXX needs work...) of interacting fandom variables using a
+Markov Fandom Field via \emph{headcannon propagation} (pun on Judea Pearl
+somehow here), although it is intractable in many cases.
 - but we can perform approximate optimization with loopy headcannon
   propagation; fandom-wanking is not guaranteed to terminate in this case, and
-  a consistent community(XXX: better term)-wide headcannon may not emerge.
+  a consistent community(XXX: better term)-wide headcannon may not
+  emerge.\footnote{The alert reader may have noticed that Tumblr is a platform
+  for human-computation (XXX: cite Luis von Ahn), performing
+  loopy headcannon propagation at scale. Most Tumblr traffic is used for
+  applications in protein folding and computational geology.}
 
 \section{A practical fandom number generator}
 We have developed a practical algorithm and implementation for
@@ -93,25 +78,22 @@ we get to it.
 
 Right. Yes.
 
-Our practical fandom number generator downloads a transformative work from
-AOOO, locates all of the base-10 numbers in it, and then returns one of them at
-fandom. These numbers, having been used by fannish domain experts in a
-transformative work on AO3, are guaranteed by definition to have high fentropy.
+Our practical fandom number generator downloads a pseudo-fandomly-selected
+transformative work from AOOO, locates all of the base-10 numbers in it, and
+then returns one of them at fandom. If for some reason there are no fandom
+numbers present in a given transformative work, we simply try the next
+transformative work until we find one.
+%% XXX: alexr doesn't really like this sentence
+(These numbers, having been used by fannish domain experts in a transformative
+work on AO3, are guaranteed by definition to have high fentropy.)
 
-Write something about text mining and how important it is for OA publishing in
-free repositories like AO3 and the splinter site arXiv (for Physics, aka the
-neutrino fandom) to allow transformative works of transformative works.  
+This work would not be canon without the public availability of sources of
+fentropy; the open publishing and reuse rights of the transformative works on
+AO3 enable us to produce our own transformative works. Of course, we could use
+a different source of fentropy, such as the AO3 splinter site arXiv, which is
+popular for for Physics, also known as the neutrino fandom.
 
-\section{alexr writing things}
-In future work, we could adapt our fandom number generator to accept other
-sources of fandomness, including arXiv.
-
-Also we could pun harder on transformative works and maybe transformational
-grammar? Transformative grammar?
-
-Fandomized algorithms could be used for generating maximum-entropy OTPs.
-
-\section{Applications}
+\section{Further Applications of Fandomized Algorithms}
 
 \subsection{OTPs}
 
@@ -123,7 +105,9 @@ break.
 
 \section{Fentropy}
 
-Fentropy is a measure of the fannishness of a fandom variable.
+Fentropy is a measure of the fannishness of a fandom variable. Computing the
+fentropy of a fandom variable exactly is in general MLP-Hard, although
+approximations are possible.
 
 The world's technological capacity to store and communicate fentropic
 information has increased since the advent of the information age,
