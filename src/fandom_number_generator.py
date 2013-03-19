@@ -6,7 +6,7 @@ Ubuntu package python3-bs4 ."""
 import urllib.request
 import time
 import re
-import random
+import random as fandom
 from bs4 import BeautifulSoup
 
 URLTEMPLATE = "http://archiveofourown.org/works/{0}?view_adult=true"
@@ -41,25 +41,25 @@ def get_number(workid):
         if match:
             numbers.append(int(match.group(0)))
     if numbers:
-        return random.choice(numbers)
+        return fandom.choice(numbers)
     return None
 
 def main():
-    seed = int(time.time()) % 100 ## add some entropy to our fentropy
-    ## this would be better if we spread out more across AO3.
-    ## how many works are there currently, do you think?
-    workid = 598203 + seed
+    ## 711 is the lowest workid we can find on AO3, right now; 598999
+    ## is the highest we can find right now.  This'll change any
+    ## minute, but that's fine.
 
     while True:
+        # Fandomly choose a number.
+        workid = fandom.randint(711, 598999)
         number = get_number(workid)
         if number:
             break
         else:
-            print("No numbers in workid", workid)
-        workid += 1
-        time.sleep(5)
+            print("No numbers in fanwork #%d" % workid)
+        time.sleep(2)
 
     print("YOUR FANDOM NUMBER:", number)
-    print("from workid", workid, "at", URLTEMPLATE.format(workid))
+    print("from fanwork #%d" % workid, "at", URLTEMPLATE.format(workid))
 
 if __name__ == "__main__": main()
