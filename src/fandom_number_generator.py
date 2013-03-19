@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Acquire Fandom Numbers. Requires Beautiful Soup 4 for python3, which is
+"""Acquire fandom numbers. Requires Beautiful Soup 4 for python3, which is
 Ubuntu package python3-bs4 ."""
 
 import urllib.request
@@ -23,8 +23,8 @@ def get_html(workid):
     return text
 
 def get_number(workid):
-    """Given an AO3 work id number, maybe return the first number we find in
-    that page. If there's no such number, return None."""
+    """Given an AO3 work id number, fandomly choose a number from that
+    page. If there's no such number, return None."""
 
     html = get_html(workid)
     soup = BeautifulSoup(html)
@@ -45,13 +45,15 @@ def get_number(workid):
     return None
 
 def main():
-    ## 711 is the lowest workid we can find on AO3, right now; 598999
-    ## is the highest we can find right now.  This'll change any
-    ## minute, but that's fine.
+    ## 711 is the lowest workid we can find on AO3; 598999 is the
+    ## highest we can find right now.  That'll change any minute, but
+    ## whatevs.
+    LOWEST = 711
+    HIGHEST = 598999
 
     while True:
         # Fandomly choose a number.
-        workid = fandom.randint(711, 598999)
+        workid = fandom.randint(LOWEST, HIGHEST)
         number = get_number(workid)
         if number:
             break
