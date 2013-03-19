@@ -35,32 +35,23 @@ demonstrate their application in a practical fandom number generator.
 \end{abstract}
 
 \section{Introduction}
-As the dictum about software development goes, ``shipping code wins". We have
-accepted this idea as headcannon, but we realize that large portions
-(fandoms?) in the computer science community remain squicked by it.
 
-As such, we wish to provide a survey of the current work in fandomized
-algorithms and the associated formalisms; in upcoming seasons, we expect that
-it will be revealed that fandom and computer science are the OTP.
+fandom variable
+fandom number
+fentropy
+fandomized algorithm
+MLP-hard
+fandomly
+fentropic
+fenergy (?)
+Dreamwidth
+OTPs
 
-Introduce the notion of \emph{fandomness} ...
+\section{Fandomness and fandom variables}
 
-A \emph{fandom variable} can take on a \emph{fandom number}, but discovering
-these fandom numbers requires a source of \emph{fentropy}. Thankfully there
-exist highly fentropic processes in nature; we can usually sample from them
-over the Internet.
-
-We may also wish to do inference over collections (cliques of fans? is there a
-good term for this? XXX needs work...) of interacting fandom variables using a
-Markov Fandom Field via \emph{headcannon propagation} (pun on Judea Pearl
-somehow here), although it is intractable in many cases.
-- but we can perform approximate optimization with loopy headcannon
-  propagation; fandom-wanking is not guaranteed to terminate in this case, and
-  a consistent community(XXX: better term)-wide headcannon may not
-  emerge.\footnote{The alert reader may have noticed that Tumblr is a platform
-  for human-computation (XXX: cite Luis von Ahn), performing
-  loopy headcannon propagation at scale. Most Tumblr traffic is used for
-  applications in protein folding and computational geology.}
+A \emph{fandom variable} can take on a \emph{fandom number}, but the
+generation of fandom numbers requires a source of
+\emph{fentropy}. Thankfully, there exist fentropic processes in nature
 
 \section{A practical fandom number generator}
 We have developed a practical algorithm and implementation for
@@ -78,43 +69,92 @@ we get to it.
 
 Right. Yes.
 
-Our practical fandom number generator downloads a pseudo-fandomly-selected
-transformative work from AOOO, locates all of the base-10 numbers in it, and
-then returns one of them at fandom. If for some reason there are no fandom
-numbers present in a given transformative work, we simply try the next
-transformative work until we find one.
-%% XXX: alexr doesn't really like this sentence
-(These numbers, having been used by fannish domain experts in a transformative
-work on AO3, are guaranteed by definition to have high fentropy.)
+\begin{lstlisting}
+lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
+YOUR FANDOM NUMBER: 31
+from fanwork #413565 at http://archiveofourown.org/works/413565?view_adult=true
+lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
+No numbers in fanwork #574736
+No numbers in fanwork #107375
+No numbers in fanwork #241151
+YOUR FANDOM NUMBER: 33
+from fanwork #64813 at http://archiveofourown.org/works/64813?view_adult=true
+lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
+No numbers in fanwork #66860
+No numbers in fanwork #127716
+No numbers in fanwork #78820
+No numbers in fanwork #127598
+YOUR FANDOM NUMBER: 2
+from fanwork #408282 at http://archiveofourown.org/works/408282?view_adult=true
+\end{lstlisting}
 
-This work would not be canon without the public availability of sources of
-fentropy; the open publishing and reuse rights of the transformative works on
-AO3 enable us to produce our own transformative works. Of course, we could use
-a different source of fentropy, such as the AO3 splinter site arXiv, which is
-popular for for Physics, also known as the neutrino fandom.
+\section{OTPs}
 
-\section{Further Applications of Fandomized Algorithms}
+OTPs are one of the most important applications of fandom numbers.  An
+OTP is when you put a character together with another character from a
+secret fandom pad, the one with whom it truly belongs (mod 26).  The
+true love of an OTP has been proven to be impossible to break.
 
-\subsection{OTPs}
+\section{Markov fandom fields}
 
-OTPs are one of the most important applications of fandom numbers.  To
-use an OTP, you put a character together with a character from a
-secret fandom pad that it truly loves and with whom it truly belongs
-(mod 26).  The true love of an OTP has been proven to be impossible to
-break.
+We may also wish to do inference over communities of interacting
+fandom variables using a Markov fandom field via \emph{headcanon
+  propagation}, although it is MLP-hard in most cases.  However, we
+can perform approximate inference with loopy headcanon propagation.
+Fandom-wanking is not guaranteed to terminate in this case, and a
+consistent community-wide headcanon may not emerge.\footnote{The alert
+  reader may have noticed that Tumblr is a platform for
+  human computation \cite{luisvonahn}, performing loopy
+  headcanon propagation at scale. Most Tumblr traffic is used for
+  applications in protein folding and computational geology.}
 
-\section{Fentropy}
 
-Fentropy is a measure of the fannishness of a fandom variable. Computing the
-fentropy of a fandom variable exactly is in general MLP-Hard, although
-approximations are possible.
 
-The world's technological capacity to store and communicate fentropic
-information has increased since the advent of the information age,
-especially since Dreamwidth launched.
+%% Our practical fandom number generator downloads a pseudo-fandomly-selected
+%% transformative work from AOOO, locates all of the base-10 numbers in it, and
+%% then returns one of them at fandom. If for some reason there are no fandom
+%% numbers present in a given transformative work, we simply try the next
+%% transformative work until we find one.
+%% %% XXX: alexr doesn't really like this sentence
+%% (These numbers, having been used by fannish domain experts in a transformative
+%% work on AO3, are guaranteed by definition to have high fentropy.)
 
-Unfortunately, if fentropy increases until all fenergy is equally
-distributed, it will eventually cause the heat death of the Jossverse.
+%% This work would not be canon without the public availability of sources of
+%% fentropy; the open publishing and reuse rights of the transformative works on
+%% AO3 enable us to produce our own transformative works. Of course, we could use
+%% a different source of fentropy, such as the AO3 splinter site arXiv, which is
+%% popular for for Physics, also known as the neutrino fandom.
+
+%% \section{Further Applications of Fandomized Algorithms}
+
+%% \subsection{OTPs}
+
+
+
+%% \section{Fentropy}
+
+%% Fentropy is a measure of the fannishness of a fandom variable. Computing the
+%% fentropy of a fandom variable exactly is in general MLP-Hard, although
+%% approximations are possible.
+
+%% The world's technological capacity to store and communicate fentropic
+%% information has increased since the advent of the information age,
+%% especially since Dreamwidth launched.
+
+%% Unfortunately, if fentropy increases until all fenergy is equally
+%% distributed, it will eventually cause the heat death of the Jossverse.
+
+%% \section{Outro}
+
+%% As the dictum about software development goes, ``shipping code
+%% wins". We have accepted this idea as headcanon, but we realize that
+%% many in the computer science community remain squicked by it.
+
+%% As such, we wish to provide a survey of the current work in fandomized
+%% algorithms and the associated formalisms; in upcoming seasons, we expect that
+%% it will be revealed that fandom and computer science are the OTP.
+
+%% Introduce the notion of \emph{fandomness} ...
 
 \bibliographystyle{abbrvnat}
 \bibliography{fandomized}
