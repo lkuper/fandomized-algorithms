@@ -10,8 +10,9 @@ import random as fandom
 from bs4 import BeautifulSoup
 
 URLTEMPLATE = "http://archiveofourown.org/works/{0}?view_adult=true"
+OUTPUTURLTEMPLATE = "http://archiveofourown.org/works/{0}"
 
-NUMBERPAT = re.compile(r"[1-9]\d*")
+NUMBERPAT = re.compile(r"\b[1-9]\d*\b")
 
 def get_html(workid):
     """Given an AO3 work id number, return the HTML text from the corresponding
@@ -62,6 +63,7 @@ def main():
         time.sleep(2)
 
     print("YOUR FANDOM NUMBER:", number)
-    print("from fanwork #%d" % workid, "at", URLTEMPLATE.format(workid))
+    print("from fanwork #%d" % workid)
+    print(OUTPUTURLTEMPLATE.format(workid))
 
 if __name__ == "__main__": main()

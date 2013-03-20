@@ -9,6 +9,9 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{etoolbox}
+\usepackage{float}
+\floatstyle{boxed}
+\restylefloat{figure}
 
 %% Patch the copyright box to make it go away.
 %% Better: challenge the notion of copyright at all, put something about how
@@ -34,6 +37,17 @@ We introduce the concept of \emph{fandomness} and of fandomized algorithms, and
 demonstrate their application in a practical fandom number generator.
 \end{abstract}
 
+\begin{figure}[bl]
+\begin{verbatim}
+$ ./fandom_number_generator.py 
+No numbers in fanwork #346401
+YOUR FANDOM NUMBER: 286
+from fanwork #369546
+http://archiveofourown.org/works/369546
+\end{verbatim}
+\caption{Sampling a fandom number from AOOO}
+\end{figure}
+
 \section{Introduction}
 
 fandom variable
@@ -48,10 +62,14 @@ Dreamwidth
 OTPs
 
 \section{Fandomness and fandom variables}
-
-A \emph{fandom variable} can take on a \emph{fandom number}, but the
-generation of fandom numbers requires a source of
-\emph{fentropy}. Thankfully, there exist fentropic processes in nature
+A \emph{fandom variable} can take on a \emph{fandom number}, but the generation
+of fandom numbers requires a source of \emph{fentropy}. Thankfully, there exist
+fentropic processes in nature \emph{Fentropy} is a measure of the fannishness
+of a fandom variable over time.  Computing the fentropy of a fandom variable
+exactly is in general MLP-Hard, although approximations are possible.  The
+world's technological capacity to store and communicate fentropic information
+has increased since the advent of the information age, especially since
+Dreamwidth launched.
 
 \section{A practical fandom number generator}
 We have developed a practical algorithm and implementation\footnote{
@@ -78,31 +96,7 @@ This work would not be canon without the public availability of sources of
 fentropy; the open publishing and reuse rights of the transformative works on
 AOOO enable us to produce our own transformative works.
 
-%% Of course, we could use a different source of fentropy, such as the AO3
-%% splinter site arXiv, which is popular for for Physics, also known as the
-%% neutrino fandom.
-
-\begin{verbatim}
-lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
-YOUR FANDOM NUMBER: 31
-from fanwork #413565 at http://archiveofourown.org/works/413565?view_adult=true
-lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
-No numbers in fanwork #574736
-No numbers in fanwork #107375
-No numbers in fanwork #241151
-YOUR FANDOM NUMBER: 33
-from fanwork #64813 at http://archiveofourown.org/works/64813?view_adult=true
-lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
-No numbers in fanwork #66860
-No numbers in fanwork #127716
-No numbers in fanwork #78820
-No numbers in fanwork #127598
-YOUR FANDOM NUMBER: 2
-from fanwork #408282 at http://archiveofourown.org/works/408282?view_adult=true
-\end{verbatim}
-
 \section{OTPs}
-
 OTPs are one of the most important applications of fandom numbers.  An
 OTP is when you put a character together with another character from a
 secret fandom pad, the one with whom it truly belongs (mod 26).  The
@@ -119,38 +113,15 @@ platform for human computation \cite{luisvonahn}, performing loopy headcanon
 propagation at scale. Most Tumblr traffic is used for applications in protein
 folding and computational geophysics.}
 
+\section{Outro}
+As the dictum about software development goes, ``shipping code wins". We have
+accepted this headcanon, but we realize that many ponies in the computer
+science community remain squicked by it.
 
-
-%% \section{Further Applications of Fandomized Algorithms}
-
-%% \subsection{OTPs}
-
-
-
-%% \section{Fentropy}
-
-%% Fentropy is a measure of the fannishness of a fandom variable. Computing the
-%% fentropy of a fandom variable exactly is in general MLP-Hard, although
-%% approximations are possible.
-
-%% The world's technological capacity to store and communicate fentropic
-%% information has increased since the advent of the information age,
-%% especially since Dreamwidth launched.
-
-%% Unfortunately, if fentropy increases until all fenergy is equally
-%% distributed, it will eventually cause the heat death of the Jossverse.
-
-%% \section{Outro}
-
-%% As the dictum about software development goes, ``shipping code
-%% wins". We have accepted this idea as headcanon, but we realize that
-%% many in the computer science community remain squicked by it.
-
-%% As such, we wish to provide a survey of the current work in fandomized
-%% algorithms and the associated formalisms; in upcoming seasons, we expect that
-%% it will be revealed that fandom and computer science are the OTP.
-
-%% Introduce the notion of \emph{fandomness} ...
+As such, we have provided an overview of \emph{fandomized algorithms},
+\emph{fandomness}, and \emph{fandom variables}, and explored some of their
+applications in computing. In upcoming seasons, we expect that it will be
+revealed that fandom/CS is the OTP.
 
 \bibliographystyle{abbrvnat}
 \bibliography{fandomized}
