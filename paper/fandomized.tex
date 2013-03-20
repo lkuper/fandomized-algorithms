@@ -54,7 +54,9 @@ generation of fandom numbers requires a source of
 \emph{fentropy}. Thankfully, there exist fentropic processes in nature
 
 \section{A practical fandom number generator}
-We have developed a practical algorithm and implementation for
+We have developed a practical algorithm and implementation\footnote{Publicly
+available at \\
+\url{http://github.com/lkuper/fandomized-algorithms}} for
 generating fandom numbers, a key component for any fandomized
 algorithm. A naturally occurring source of fentropy, Archive of Our
 Own\footnote{Google for ``archive of our own"; do you not know how to
@@ -67,9 +69,7 @@ fandomness may be required -- we may have to mine THE DARK
 SOCIAL\footnote{THE DARK SOCIAL} -- but we will burn that bridge when
 we get to it.
 
-Right. Yes.
-
-\begin{lstlisting}
+\begin{verbatim}
 lkuper@mitzi:~/repos/fandomized-algorithms/src$ ./fandom_number_generator.py 
 YOUR FANDOM NUMBER: 31
 from fanwork #413565 at http://archiveofourown.org/works/413565?view_adult=true
@@ -86,7 +86,7 @@ No numbers in fanwork #78820
 No numbers in fanwork #127598
 YOUR FANDOM NUMBER: 2
 from fanwork #408282 at http://archiveofourown.org/works/408282?view_adult=true
-\end{lstlisting}
+\end{verbatim}
 
 \section{OTPs}
 
