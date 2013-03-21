@@ -38,6 +38,9 @@ discuss some of their applications, and demonstrate a practical fandom number
 generator.
 \end{abstract}
 
+\category{Pairing/Characters}{CS/fandom}{}
+\category{Rating}{PG-13}{}
+
 \begin{figure}[bl]
 \begin{verbatim}
 $ ./fandom_number_generator.py 
@@ -46,37 +49,38 @@ YOUR FANDOM NUMBER: 286
 from fanwork #369546
 http://archiveofourown.org/works/369546
 \end{verbatim}
-\caption{Sampling a fandom number from AOOO}
+\caption{Sampling a fandom number from AO3.}
 \end{figure}
 
-\section{Introduction}
-Fandomized algorithms make use of fandom numbers and fentropy to perform
-useful, or at least emotionally satisfying, computation.
+\section{Spoiler warning}
+Fandomized algorithms make use of fandom numbers and fentropy to
+perform useful, or at least emotionally satisfying, computation. Here
+we discuss some of the most prominent applications for fandomized
+algorithms.
 
-\emph{Fandomness} is ...
-
-Here we discuss some of the most prominent applications for fandomized
-algorithms...
-
-... we hope to disseminate these ideas more broadly within computing...
 
 %% mix in more: http://www.angelfire.com/falcon/moonbeam/terms.html
 
 \section{Fandomness and fandom variables}
-A \emph{fandom variable} can take on a \emph{fandom number}, but the generation
-of fandom numbers requires a source of \emph{fentropy}. Thankfully, there exist
-fentropic processes in nature \emph{Fentropy} is a measure of the fannishness
-of a fandom variable over time.  Computing the fentropy of a fandom variable
-exactly is in general MLP-Hard, although approximations are possible.  The
-world's technological capacity to store and communicate fentropic information
-has increased since the advent of the information age, especially since
-Dreamwidth launched.
+A \emph{fandom variable} can take on a \emph{fandom number}, but the
+generation of fandom numbers requires a source of
+\emph{fentropy}. Thankfully, there exist fentropic processes in
+nature, and we can typically sample from them over the
+Internet. \emph{Fentropy} is a measure of the fannishness of a fandom
+variable over time.  Computing the exact fentropy of a fandom variable
+is in general MLP-hard, although approximations are possible.  The
+world's technological capacity to store and communicate fentropic
+information has increased since the advent of the information age,
+especially since Dreamwidth launched.
 
 \section{OTPs}
-OTPs are one of the most important applications of fandom numbers.  An
-OTP is when you put a character together with another character from a
-secret fandom pad, the one with whom it truly belongs (mod 26).  The
-true love of an OTP has been proven to be impossible to break.
+OTPs are one of the most important applications of fandom numbers.  In
+an OTP, a character is combined with another character from a secret
+fandom pad, the one with whom it truly belongs (mod 26).  For
+characters $c_1$ and $c_2$, we denote such a pairing as $c_1/c_2$.  If
+the OTP key material is truly fandom (sampling from {\tt
+  /dev/ufandom}, for instance, may be insufficiently fandom), the true
+love of an OTP has been proven impossible to break.
 
 \section{Markov fandom fields}
 We may also wish to do inference over communities of interacting fandom
@@ -90,31 +94,32 @@ propagation at scale. Most Tumblr traffic is used for applications in protein
 folding and computational geophysics.}
 
 \section{A practical fandom number generator}
-We have developed a practical algorithm and implementation\footnote{
-\url{http://github.com/lkuper/fandomized-algorithms}} for
-generating fandom numbers, a key component for any fandomized
-algorithm. A naturally occurring source of fentropy, Archive of Our
-Own\footnote{Google for ``archive of our own"; do you not know how to
-  do web searches?\footnotemark}
-\footnotetext{Oh, fine.  It's \cite{ao3}.}, supplies an
-ever-increasing amount of fandomness, certainly more than the current
-global demand for fentropy to power fandomized algorithms. As
-fandomized algorithms become more broadly deployed, further sources of
-fandomness may be required -- we may have to mine THE DARK
-SOCIAL\footnote{THE DARK SOCIAL} -- but we will burn that bridge when
-we get to it.
+We have developed a practical algorithm and implementation for
+generating fandom numbers, which are a key component for any
+fandomized algorithm. Our fandom number generator is available at:
+\begin{center}
+\url{http://github.com/lkuper/fandomized-algorithms}
+\end{center}
+\noindent A naturally occurring source of fentropy, \textit{Archive of
+  Our Own} (AO3), supplies an ever-increasing amount of
+fandomness, certainly more than the current global demand for fentropy
+to power fandomized algorithms.\footnote{Google for ``archive of our own"; do you
+  not know how to do web searches?\footnotemark}\footnotetext{Oh,
+  fine.  \cite{ao3}.} As fandomized algorithms become more
+broadly deployed, further sources of fandomness may be required.
 
 Our practical fandom number generator downloads a pseudo-fandomly-selected
-transformative work from AOOO, locates all of the base-10 numbers in it, and
+transformative work from AO3, locates all of the base-10 numbers in it, and
 then returns one of them at fandom. If for some reason there are no fandom
 numbers present in a given transformative work, we simply try another
 transformative work until we find one.
 
-This work would not be canon without the public availability of sources of
-fentropy; the open publishing and reuse rights of the transformative works on
-AOOO enable us to produce our own transformative works.
+This work would not be canon without the public availability of
+sources of fentropy; the open publishing and reuse rights of the
+transformative works on AO3 enable us to transform these
+transformative works into transformative works of our own.
 
-\section{Outro}
+\section{Season finale}
 As the dictum about software development goes, ``shipping code wins". We have
 accepted this headcanon, but we realize that many ponies in the computer
 science community remain squicked by it.
@@ -123,6 +128,10 @@ As such, we have provided an overview of \emph{fandomized algorithms},
 \emph{fandomness}, and \emph{fandom variables}, and explored some of their
 applications in computing. In upcoming seasons, we expect that it will be
 revealed that fandom/CS is the OTP.
+
+\section*{Acknowledgments}
+
+We would like to thank our beta readers.
 
 \bibliographystyle{abbrvnat}
 \bibliography{fandomized}
