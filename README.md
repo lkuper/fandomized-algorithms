@@ -6,7 +6,9 @@ Lindsey Kuper and Alex Rudnick's submission for [SIGBOVIK
 
 To use our fandom number generator, run `./fandom_number_generator.py`
 in `src/` (requires Python 3).  To build the paper, run `make` in
-`paper/`.
+`paper/`, or just [download the
+PDF](https://github.com/lkuper/fandomized-algorithms/blob/master/paper/fandomized.pdf).
+Enjoy!
 
 Example output:
 
